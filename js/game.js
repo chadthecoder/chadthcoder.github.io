@@ -1,7 +1,10 @@
 function changeShape()
 	{
-		document.getElementById("shape").style.marginTop = Math.floor(Math.random() * 400) + 10+"px";
-		document.getElementById("shape").style.marginLeft = Math.floor(Math.random() * 400) + 10+"px";
+		var gameWidth = document.getElementById("game").clientWidth-400;
+		var gameHeight = document.getElementById("game").clientHeight-400;
+
+		document.getElementById("shape").style.marginTop = Math.floor(Math.random() * gameHeight) + 10+"px";
+		document.getElementById("shape").style.marginLeft = Math.floor(Math.random() * gameWidth) + 10+"px";
 		
 		if(Math.random() > 0.5) //circle or nah?
 		{
