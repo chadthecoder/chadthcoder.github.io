@@ -1,11 +1,13 @@
+var gameWidth;
+var gameHeight;
+
 function changeShape()
 	{
-		var gameWidth = document.getElementById("game").clientWidth-400;
-		var gameHeight = document.getElementById("game").clientHeight-400;
-
-		document.getElementById("shape").style.marginTop = Math.floor(Math.random() * gameHeight) + 10+"px";
-		document.getElementById("shape").style.marginLeft = Math.floor(Math.random() * gameWidth) + 10+"px";
+		gameWidth = document.getElementById("game").clientWidth;
+		gameHeight = document.getElementById("game").clientHeight;
 		
+
+
 		if(Math.random() > 0.5) //circle or nah?
 		{
 			document.getElementById("shape").style.borderRadius = "50%";
@@ -19,45 +21,53 @@ function changeShape()
 			document.getElementById("shape").style.width = Math.floor(Math.random() * 400) + 10+"px";
 			document.getElementById("shape").style.height = Math.floor(Math.random() * 400) + 10+"px";
 		}
-		
+	
+		document.getElementById("shape").style.marginTop = Math.floor(Math.random() * gameHeight)+"px"; // - document.getElementById("shape").style.height+"px";
+		document.getElementById("shape").style.marginLeft = Math.floor(Math.random() * gameWidth)+"px";
+
 		var color = "#"+ ('000000' + Math.floor(Math.random()*16777215).toString(16)).slice(-6);
 		if(color == "#FFFFFF")
 		{
 			color = "#0000FF";
 		}	
 		document.getElementById("shape").style.backgroundColor = color;
+
+	document.getElementById("shape").style.display = "block";
+	start = new Date().getTime();
 	}
 	
 	var start;
+	var end;
+	var time;
 
-	function hello()
-	{
-		changeShape();
-		document.getElementById("shape").style.display = "block";
+	//function hello()
+	//{
+		//changeShape();
+		
 	
-		start = new Date().getTime();
+		
 
 		//do something
+		//appearDelay();
 
 		
-	}
+	//}
 
 	function appearDelay()
 	{
-	setTimeout(hello, Math.random()*2000);
+	setTimeout(changeShape, Math.random()*2000);
 	}
 	appearDelay();
 	
 function goodbye()
 {
-   document.getElementById("shape").style.display = "none";
-   
-	var end = new Date().getTime();
-	var time = (end - start)/1000;
+	end = new Date().getTime();
+	time = (end - start)/1000;
+
+	document.getElementById("shape").style.display = "none";
+
 	document.getElementById("time").innerHTML = "The time taken was: " + time + "s";
-	
-	changeShape();
-	
+
 	appearDelay();
 }
 
