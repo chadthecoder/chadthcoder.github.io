@@ -64,11 +64,12 @@ function goodbye()
 {
 	end = new Date().getTime();
 	time = (end - start)/1000;
+	if(time < bestTime) bestTime = time;
 
 	document.getElementById("shape").style.display = "none";
 
 	document.getElementById("time").innerHTML = "The time taken was: " + time + "s";
-	document.getElementById("time").innerHTML = "The best time so far was: " + bestTime + "s";
+	document.getElementById("best").innerHTML = "The best time so far was: " + bestTime + "s";
 
 	appearDelay();
 }
