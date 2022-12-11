@@ -69,7 +69,7 @@ function goodbye()
 	document.getElementById("shape").style.display = "none";
 
 	document.getElementById("time").innerHTML = "The time taken was: " + time + "s";
-	document.getElementById("best").innerHTML = "The best time so far was: " +  "s";
+	document.getElementById("best").innerHTML = "The best time so far was: " + bestTime + "s";
 
 	appearDelay();
 }
