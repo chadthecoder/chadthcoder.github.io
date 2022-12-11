@@ -3,14 +3,14 @@ var gameHeight;
 var bestTime = 100;
 var shape = document.getElementById("shape");
 var game = document.getElementById("game");
-
+var shapeNumber;
 
 function changeShape()
 	{
 		gameWidth = game.clientWidth;
 		gameHeight = game.clientHeight;
 		
-  var shapeNumber = Math.random();
+  shapeNumber = Math.random();
 
 		if(shapeNumber < 0.3) // circle
 		{
