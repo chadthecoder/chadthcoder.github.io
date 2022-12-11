@@ -19,7 +19,7 @@ function changeShape()
 			shape.style.width = size;
 			shape.style.height = size;
 		}
-		else if(shapeNumber >= 0.3 && shapeNumber < 0.7) //square ish
+		else if(shapeNumber >= 0.3)// && shapeNumber < 0.7) //square ish
 		{
 			shape.style.borderRadius = "0%";
 			shape.style.width = Math.floor(Math.random() * 400) + 10+"px";
