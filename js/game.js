@@ -1,6 +1,6 @@
 var gameWidth;
 var gameHeight;
-var bestTime = 1000;
+var bestTime = 10000000;
 
 function changeShape()
 	{
