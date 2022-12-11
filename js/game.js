@@ -1,47 +1,48 @@
 var gameWidth;
 var gameHeight;
-var bestTime = 10000000;
+var bestTime = 100;
+var shape = document.getElementById("game");
 
 function changeShape()
 	{
-		gameWidth = document.getElementById("game").clientWidth;
-		gameHeight = document.getElementById("game").clientHeight;
+		gameWidth = shape.clientWidth;
+		gameHeight = shape.clientHeight;
 		
   var shapeNumber = Math.random();
 
 		if(shapeNumber < 0.3) // circle
 		{
-			document.getElementById("shape").style.borderRadius = "50%";
+			shape.style.borderRadius = "50%";
 			var size = Math.floor(Math.random() * 400) + 10+"px";
-			document.getElementById("shape").style.width = size;
-			document.getElementById("shape").style.height = size;
+			shape.style.width = size;
+			shape.style.height = size;
 		}
 		else if(shapeNumber >= 0.3 && shapeNumber < 0.7) //square ish
 		{
-			document.getElementById("shape").style.borderRadius = "0%";
-			document.getElementById("shape").style.width = Math.floor(Math.random() * 400) + 10+"px";
-			document.getElementById("shape").style.height = Math.floor(Math.random() * 400) + 10+"px";
+			shape.style.borderRadius = "0%";
+			shape.style.width = Math.floor(Math.random() * 400) + 10+"px";
+		 shape.style.height = Math.floor(Math.random() * 400) + 10+"px";
 		}
 		else //triangle not done
 		{
-			document.getElementById("shape").style.width = 0;
-   document.getElementById("shape").style.height = 0;
+			shape.style.width = 0;
+   shape.style.height = 0;
    //border: 150px solid transparent;
    //border-top: 0;
    //border-bottom: 300px solid red;
 		}
 	
-		document.getElementById("shape").style.marginTop = Math.floor(Math.random() * gameHeight)+"px"; // - document.getElementById("shape").style.height+"px";
-		document.getElementById("shape").style.marginLeft = Math.floor(Math.random() * gameWidth)+"px";
+	 shape.style.marginTop = Math.floor(Math.random() * gameHeight)+"px"; // - document.getElementById("shape").style.height+"px";
+		shape.style.marginLeft = Math.floor(Math.random() * gameWidth)+"px";
 
 		var color = "#"+ ('000000' + Math.floor(Math.random()*16777215).toString(16)).slice(-6);
 		if(color == "#FFFFFF")
 		{
 			color = "#0000FF";
 		}	
-		document.getElementById("shape").style.backgroundColor = color;
+		shape.style.backgroundColor = color;
 
-	document.getElementById("shape").style.display = "block";
+	shape.style.display = "block";
 	start = new Date().getTime();
 	}
 	
@@ -74,7 +75,7 @@ function goodbye()
 	time = (end - start)/1000;
 	if(time < bestTime) bestTime = time;
 
-	document.getElementById("shape").style.display = "none";
+	shape.style.display = "none";
 
 	document.getElementById("time").innerHTML = "The time taken was: " + time + "s";
 	document.getElementById("best").innerHTML = "The best time so far was: " + bestTime + "s";
