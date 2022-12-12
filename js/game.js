@@ -25,13 +25,18 @@ function changeShape()
 			shapeId.style.width = Math.floor(Math.random() * 400) + 10+"px";
 		 shapeId.style.height = Math.floor(Math.random() * 400) + 10+"px";
 		}
-		//else //triangle not done
+		else //triangle not done
 		{
 			//shape.style.width = 0;
    //shape.style.height = 0;
    //border: 150px solid transparent;
    //border-top: 0;
    //border-bottom: 300px solid red;
+
+   shapeId.style.borderRadius = "0%";
+			shapeId.style.width = Math.floor(Math.random() * 400) + 10+"px";
+		 shapeId.style.height = Math.floor(Math.random() * 400) + 10+"px";
+		}
 		}
 	
 	 shapeId.style.marginTop = Math.floor(Math.random() * gameHeight)+"px"; // - document.getElementById("shape").style.height+"px";
