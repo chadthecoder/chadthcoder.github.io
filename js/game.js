@@ -1,29 +1,29 @@
 var gameWidth;
 var gameHeight;
 var bestTime = 100;
-const shape = document.getElementById("shape");
-const game = document.getElementById("game");
+const shapeId = document.getElementById("shape");
+const gameId = document.getElementById("game");
 var shapeNumber;
 
 function changeShape()
 	{
-		gameWidth = game.clientWidth;
-		gameHeight = game.clientHeight;
+		gameWidth = gameId.clientWidth;
+		gameHeight = gameId.clientHeight;
 		
   shapeNumber = Math.random();
 
-		if(shapeNumber < 0.3) // circle
+		if(shapeNumber < 0.5) // circle
 		{
-			shape.style.borderRadius = "50%";
+			shapeId.style.borderRadius = "50%";
 			var size = Math.floor(Math.random() * 400) + 10+"px";
-			shape.style.width = size;
-			shape.style.height = size;
+			shapeId.style.width = size;
+			shapeId.style.height = size;
 		}
-		else if(shapeNumber >= 0.3)// && shapeNumber < 0.7) //square ish
+		else if(shapeNumber >= 0.5)// && shapeNumber < 0.7) //square ish
 		{
-			shape.style.borderRadius = "0%";
-			shape.style.width = Math.floor(Math.random() * 400) + 10+"px";
-		 shape.style.height = Math.floor(Math.random() * 400) + 10+"px";
+			shapeId.style.borderRadius = "0%";
+			shapeId.style.width = Math.floor(Math.random() * 400) + 10+"px";
+		 shapeId.style.height = Math.floor(Math.random() * 400) + 10+"px";
 		}
 		//else //triangle not done
 		{
@@ -34,17 +34,17 @@ function changeShape()
    //border-bottom: 300px solid red;
 		}
 	
-	 shape.style.marginTop = Math.floor(Math.random() * gameHeight)+"px"; // - document.getElementById("shape").style.height+"px";
-		shape.style.marginLeft = Math.floor(Math.random() * gameWidth)+"px";
+	 shapeId.style.marginTop = Math.floor(Math.random() * gameHeight)+"px"; // - document.getElementById("shape").style.height+"px";
+		shapeId.style.marginLeft = Math.floor(Math.random() * gameWidth)+"px";
 
 		var color = "#"+ ('000000' + Math.floor(Math.random()*16777215).toString(16)).slice(-6);
 		if(color == "#FFFFFF")
 		{
 			color = "#0000FF";
 		}	
-		shape.style.backgroundColor = color;
+		shapeId.style.backgroundColor = color;
 
-	shape.style.display = "block";
+	shapeId.style.display = "block";
 	start = new Date().getTime();
 	}
 	
@@ -77,7 +77,7 @@ function goodbye()
 	time = (end - start)/1000;
 	if(time < bestTime) bestTime = time;
 
-	shape.style.display = "none";
+	shapeId.style.display = "none";
 
 	document.getElementById("time").innerHTML = "The time taken was: " + time + "s";
 	document.getElementById("best").innerHTML = "The best time so far was: " + bestTime + "s";
