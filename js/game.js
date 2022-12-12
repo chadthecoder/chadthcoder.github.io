@@ -12,7 +12,7 @@ function changeShape()
 		
   shapeNumber = Math.random();
 
-		if(shapeNumber < 0.5) // circle
+		if(Math.random() < 0.5) // circle
 		{
 			shapeId.style.borderRadius = "50%";
 			var size = Math.floor(Math.random() * 400) + 10+"px";
