@@ -1,13 +1,14 @@
 var gameWidth;
 var gameHeight;
 var bestTime = 100;
+const shapeId = document.getElementById("shape");
+const gameId = document.getElementById("game");
 
 var shapeNumber = Math.random();
 
 function changeShape()
 	{
-		const shapeId = document.getElementById("shape");
-const gameId = document.getElementById("game");
+		
 		
 		gameWidth = document.getElementById("game").clientWidth;
 		gameHeight = document.getElementById("game").clientHeight;
@@ -16,16 +17,16 @@ const gameId = document.getElementById("game");
 
 		if(Math.random() < 0.5) // circle
 		{
-			shapeId.style.borderRadius = "50%";
+			document.getElementById("shape").style.borderRadius = "50%";
 			var size = Math.floor(Math.random() * 400) + 10+"px";
-			shapeId.style.width = size;
-			shapeId.style.height = size;
+			document.getElementById("shape").style.width = size;
+			document.getElementById("shape").style.height = size;
 		}
 		else(shapeNumber >= 0.5)// && shapeNumber < 0.7) //square ish
 		{
-			shapeId.style.borderRadius = "0%";
-			shapeId.style.width = Math.floor(Math.random() * 400) + 10+"px";
-		 shapeId.style.height = Math.floor(Math.random() * 400) + 10+"px";
+			document.getElementById("shape").style.borderRadius = "0%";
+			document.getElementById("shape").style.width = Math.floor(Math.random() * 400) + 10+"px";
+		 document.getElementById("shape").style.height = Math.floor(Math.random() * 400) + 10+"px";
 		}
 		//else //triangle not done
 		{
