@@ -7,8 +7,8 @@ var shapeNumber = Math.random();
 
 function changeShape()
 	{
-		gameWidth = gameId.clientWidth;
-		gameHeight = gameId.clientHeight;
+		gameWidth = document.getElementById("game").clientWidth;
+		gameHeight = document.getElementById("game").clientHeight;
 		
   shapeNumber = Math.random();
 
