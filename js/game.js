@@ -1,12 +1,14 @@
 var gameWidth;
 var gameHeight;
 var bestTime = 100;
-const shapeId = document.getElementById("shape");
-const gameId = document.getElementById("game");
+
 var shapeNumber = Math.random();
 
 function changeShape()
 	{
+		const shapeId = document.getElementById("shape");
+const gameId = document.getElementById("game");
+		
 		gameWidth = document.getElementById("game").clientWidth;
 		gameHeight = document.getElementById("game").clientHeight;
 		
