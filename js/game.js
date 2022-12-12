@@ -10,23 +10,23 @@ function changeShape()
 	{
 		
 		
-		gameWidth = document.getElementById("game").clientWidth;
-		gameHeight = document.getElementById("game").clientHeight;
+		gameWidth = gameId.clientWidth;
+		gameHeight = gameId.clientHeight;
 		
   shapeNumber = Math.random();
 
 		if(Math.random() < 0.5) // circle
 		{
-			document.getElementById("shape").style.borderRadius = "50%";
+			shapeId.style.borderRadius = "50%";
 			var size = Math.floor(Math.random() * 400) + 10+"px";
-			document.getElementById("shape").style.width = size;
-			document.getElementById("shape").style.height = size;
+			shapeId.style.width = size;
+			shapeId.style.height = size;
 		}
 		else(shapeNumber >= 0.5)// && shapeNumber < 0.7) //square ish
 		{
-			document.getElementById("shape").style.borderRadius = "0%";
-			document.getElementById("shape").style.width = Math.floor(Math.random() * 400) + 10+"px";
-		 document.getElementById("shape").style.height = Math.floor(Math.random() * 400) + 10+"px";
+			shapeId.style.borderRadius = "0%";
+			shapeId.style.width = Math.floor(Math.random() * 400) + 10+"px";
+		 	shapeId.style.height = Math.floor(Math.random() * 400) + 10+"px";
 		}
 		//else //triangle not done
 		{
