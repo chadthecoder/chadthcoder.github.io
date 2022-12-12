@@ -32,11 +32,9 @@ function changeShape()
 		{
 			shapeId.style.width = 0;
    			shapeId.style.height = 0;
-   			shapeId.borderWidth = "150px"; //150px solid transparent;
+   			shapeId.borderWidth = "0 150 150 150"; //150px solid transparent;
 			shapeId.borderStyle = "solid";
-			shapeId.borderColor = "rgba(201, 76, 76, 1)";
-   			shapeId.borderTop = "0";
-   			shapeId.borderBottom = "300px solid red";
+			shapeId.borderColor = "rgba(201, 76, 76, 0), rgba(0,0,0,0), rgba(0,0,0,1), rgba(0,0,0,0)"
 
    //shapeId.style.borderRadius = "0%";
 			//shapeId.style.width = Math.floor(Math.random() * 400) + 10+"px";
