@@ -35,7 +35,7 @@ function changeShape()
    			shapeId.borderWidth = "150px"; //150px solid transparent;
 			shapeId.borderStyle = "solid";
 			shapeId.borderColor = "rgba(201, 76, 76, 1)";
-   			shapeId.borderTop = "0px";
+   			shapeId.borderTop = "0";
    			shapeId.borderBottom = "300px solid red";
 
    //shapeId.style.borderRadius = "0%";
