@@ -36,7 +36,7 @@ function changeShape()
    //shapeId.style.borderRadius = "0%";
 			//shapeId.style.width = Math.floor(Math.random() * 400) + 10+"px";
 		 //shapeId.style.height = Math.floor(Math.random() * 400) + 10+"px";
-		}
+		
 		}
 	
 	 shapeId.style.marginTop = Math.floor(Math.random() * gameHeight)+"px"; // - document.getElementById("shape").style.height+"px";
