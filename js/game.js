@@ -19,13 +19,13 @@ function changeShape()
 			shapeId.style.width = size;
 			shapeId.style.height = size;
 		}
-		else if(shapeNumber >= 0.5)// && shapeNumber < 0.7) //square ish
+		else(shapeNumber >= 0.5)// && shapeNumber < 0.7) //square ish
 		{
 			shapeId.style.borderRadius = "0%";
 			shapeId.style.width = Math.floor(Math.random() * 400) + 10+"px";
 		 shapeId.style.height = Math.floor(Math.random() * 400) + 10+"px";
 		}
-		else //triangle not done
+		//else //triangle not done
 		{
 			//shape.style.width = 0;
    //shape.style.height = 0;
@@ -33,9 +33,9 @@ function changeShape()
    //border-top: 0;
    //border-bottom: 300px solid red;
 
-   shapeId.style.borderRadius = "0%";
-			shapeId.style.width = Math.floor(Math.random() * 400) + 10+"px";
-		 shapeId.style.height = Math.floor(Math.random() * 400) + 10+"px";
+   //shapeId.style.borderRadius = "0%";
+			//shapeId.style.width = Math.floor(Math.random() * 400) + 10+"px";
+		 //shapeId.style.height = Math.floor(Math.random() * 400) + 10+"px";
 		}
 		}
 	
