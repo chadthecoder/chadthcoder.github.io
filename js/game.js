@@ -15,26 +15,26 @@ function changeShape()
 		
   shapeNumber = Math.random();
 
-		if(Math.random() < 0.33) // circle
+		if(Math.random() < 0.5) // circle
 		{
 			shapeId.style.borderRadius = "50%";
 			var size = Math.floor(Math.random() * 400) + 10+"px";
 			shapeId.style.width = size;
 			shapeId.style.height = size;
 		}
-		else if(shapeNumber >= 0.33 && shapeNumber < 0.66) //square ish
+		else if(shapeNumber >= 0.5) //square ish
 		{
 			shapeId.style.borderRadius = "0%";
 			shapeId.style.width = Math.floor(Math.random() * 400) + 10+"px";
 		 	shapeId.style.height = Math.floor(Math.random() * 400) + 10+"px";
 		}
-		else //triangle not done
+		//else //triangle not done
 		{
-			shapeId.style.width = 0;
-   			shapeId.style.height = 0;
-   			shapeId.borderWidth = "0 150 150 150"; //150px solid transparent;
-			shapeId.borderStyle = "solid";
-			shapeId.borderColor = "rgba(201, 76, 76, 0), rgba(0,0,0,0), rgba(0,0,0,1), rgba(0,0,0,0)"
+			//shapeId.style.width = 0;
+   			//shapeId.style.height = 0;
+   			//shapeId.borderWidth = "0 150 150 150"; //150px solid transparent;
+			//shapeId.borderStyle = "solid";
+			//shapeId.borderColor = "rgba(201, 76, 76, 0), rgba(0,0,0,0), rgba(0,0,0,1), rgba(0,0,0,0)"
 
    //shapeId.style.borderRadius = "0%";
 			//shapeId.style.width = Math.floor(Math.random() * 400) + 10+"px";
